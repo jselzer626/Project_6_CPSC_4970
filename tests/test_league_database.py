@@ -90,8 +90,8 @@ class LeagueDatabaseTests(unittest.TestCase):
         ld1.add_league(l1)
         # test normal
         ld1.export_league_teams(l1, "test_export")
-        self.assertTrue(os.path.isfile("test_export.csv"))
-        f = open('test_export.csv', mode="r")
+        self.assertTrue(os.path.isfile("exports/test_export.csv"))
+        f = open('exports/test_export.csv', mode="r")
         csv_reader = csv.DictReader(f)
         # confirm header names
         self.assertEqual(['Team name', 'Member name', 'Member email'], csv_reader.fieldnames)
@@ -101,7 +101,7 @@ class LeagueDatabaseTests(unittest.TestCase):
         self.assertEqual('Betty', test_names[3])
         self.assertEqual('dino', test_emails[7])
         f.close()
-        os.remove("test_export.csv")
+        os.remove("exports/test_export.csv")
         # test with incorrect object parameter
         error_msg = "Process aborted. Invalid league object provided."
         self.assertEqual(error_msg, ld1.export_league_teams(ld1, "test_export_2"))
@@ -112,11 +112,13 @@ class LeagueDatabaseTests(unittest.TestCase):
         ld1.import_league_teams(l1, 'Teams.csv')
         self.assertEqual(1, len(ld1.leagues))
         ld1.export_league_teams(l1, "test_export")
-        self.assertTrue(os.path.isfile("test_export.csv"))
-        f = open('test_export.csv', encoding='utf-8', mode="r")
+        self.assertTrue(os.path.isfile("exports/test_export.csv"))
+        f = open('exports/test_export.csv', encoding='utf-8', mode="r")
         csv_reader = csv.DictReader(f)
         test_teams = {row['Team name'] for row in csv_reader}
         self.assertEqual({team.name for team in l1.teams}, test_teams)
+        f.close()
+        os.remove('exports/test_export.csv')
 
     def test_email_send(self):
         e1 = Emailer()

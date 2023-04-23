@@ -1,8 +1,8 @@
 import unittest
-from module5.team import Team
-from module5.team_member import TeamMember
-from module5.duplicate_oid import DuplicateOid
-from module5.duplicate_email import DuplicateEmail
+from models.team import Team
+from models.team_member import TeamMember
+from models.duplicate_oid import DuplicateOid
+from models.duplicate_email import DuplicateEmail
 
 
 class TeamTests2(unittest.TestCase):

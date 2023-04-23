@@ -1,8 +1,8 @@
 import datetime
 import unittest
 
-from module5.competition import Competition
-from module5.team import Team
+from models.competition import Competition
+from models.team import Team
 
 
 class CompetitionTests(unittest.TestCase):

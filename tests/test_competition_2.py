@@ -1,10 +1,10 @@
 import datetime
 import unittest
 
-from module5.competition import Competition
-from module5.team import Team
-from module5.emailer import Emailer
-from module5.team_member import TeamMember
+from models.competition import Competition
+from models.team import Team
+from models.emailer import Emailer
+from models.team_member import TeamMember
 
 class CompetitionTests2(unittest.TestCase):
     """First class of competition tested create. 

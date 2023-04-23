@@ -67,7 +67,7 @@ class LeagueDatabase:
         file_name = f"backups/{file_name}.backup"
         for file in os.listdir('./backups'):
             if '.backup' in file and file != file_name:
-                os.remove(file)
+                os.remove(f"./backups/{file}")
         if self.instance() is not None:
             f = open(file_name, mode="wb")
             pickle.dump(self.instance(), f)

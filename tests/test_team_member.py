@@ -1,5 +1,5 @@
 import unittest
-from module5.team_member import TeamMember
+from models.team_member import TeamMember
 from tests.fake_emailer import FakeEmailer
 
 
