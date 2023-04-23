@@ -8,9 +8,9 @@ This is the final project for CSPC 4970. The goal of this project was to practic
 ### Functionality
 Users can view and edit leagues, add/delete teams from those leagues, and add/delete members from those teams, or update information for a selected member, via a multi window display. 
 
-Each object (teams, leagues, players) is edited in separate windows. To access detailed data for a specific object, it is necessary to select that object (league/team/player) and click on edit. Leagues can be accessed for edit from the league editor, or main window, teams can be accessed for edit from the league editor window, and players can be accessed for edit from the team editor window. 
+Each object (teams, leagues, players) is edited in separate windows. To access detailed data for a specific object, it is necessary to select that object (league/team/player) and click on edit. Leagues can be accessed for edit from the league editor, or main window, teams can be accessed for edit from the league editor window, and players can be accessed for edit from the team editor window. Thus, it is not possible to search for a team or specific player from the main window, first that team's league, or player's team must be selected from the corresponding window and edit must be clicked. 
 
-Thus, it is not possible to search for a team or specific player from the main window, first that team's league, or player's team must be selected from the corresponding window and edit must be clicked. 
+When creating new leagues, teams or updating team member information, use the text input boxes located at the bottom of the respective editor windows for those objects. If you don't enter information in as required, an error message will appear. 
 
 Users can also save league data, and load saved data to restore previously backed up data related to leagues, teams and players, by clicking on either the load or save option in the top bar menu in the main window of the application. 
 
