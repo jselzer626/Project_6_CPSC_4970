@@ -12,7 +12,7 @@ Each object (teams, leagues, players) is edited in separate windows. To access d
 
 When creating new leagues, teams or updating team member information, use the text input boxes located at the bottom of the respective editor windows for those objects. If you don't enter information in as required, an error message will appear. 
 
-Users can also save league data, and load saved data to restore previously backed up data related to leagues, teams and players, by clicking on either the load or save option in the top bar menu in the main window of the application. 
+Users can also save league data, and load saved data to restore previously backed up data related to leagues, teams and players, by clicking on either the load or save option in the top bar menu in the main window of the application. If you select a file with invalid data to load, then the most recent back up will be loaded. 
 
 Users can also import and export team data for a specific league, by first creating/selecting that league in the main window, clicking on edit, and then clicking on either the import or export button in the league editor window that pops up. Exported files will be sent to the exports folder in the application file directory. 
 
