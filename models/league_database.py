@@ -87,16 +87,16 @@ class LeagueDatabase:
             with open(file_name, encoding='utf-8') as csvfile:
                 league_data = csv.DictReader(csvfile)
                 current_team = None
-                current_oid = 0
+                # current_oid = 0
                 for row in league_data:
                     if not current_team: # first team on list
-                        current_team = Team(current_oid, row['Team name'])
+                        current_team = Team(self.next_oid(), row['Team name'])
                         league.add_team(current_team)
                     elif current_team.name != row['Team name']:
-                        current_team = Team(current_oid, row['Team name'])
+                        current_team = Team(self.next_oid(), row['Team name'])
                         league.add_team(current_team)
-                    current_team.add_member(TeamMember(current_oid, row['Member name'], row['Member email']))
-                    current_oid += 1
+                    current_team.add_member(TeamMember(self.next_oid(), row['Member name'], row['Member email']))
+                    # current_oid += 1
                 self.add_league(league)
                 csvfile.close()
                 return "Team data successfully imported."
