@@ -29,7 +29,6 @@ class MainWindow(QtBaseWindow, Ui_MainWindow):
                 self.league_db = LeagueDatabase.instance()
                 self.update_ui()
             except Exception as e:
-                print(e)
                 return_msg = "Error reading file. Process aborted"
             icon = "i" if return_msg == "League database successfully loaded." else "w"
             result_dialog = create_msg_box("Loading Result", return_msg, icon)
@@ -75,7 +74,6 @@ class MainWindow(QtBaseWindow, Ui_MainWindow):
             if league_edit.exec() == QDialog.DialogCode.Rejected:
                 league_edit.close()
         except Exception as e:
-            print(e)
             dialog = QMessageBox()
             dialog.setWindowTitle("Oops!")
             dialog.setIcon(QMessageBox.Critical)
