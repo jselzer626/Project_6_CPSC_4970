@@ -21,7 +21,7 @@ Users can also import and export team data for a specific league, by first creat
 ### Getting Started
 Download a zip file of the application code by navigating to the releases section of this repo page. The current release, as of 4/23/23 is 1.0
 
-Once the zip has been downloaded and expanded, copy the files to the directory location where you want to keep the source code. Create and activate virtual environment where you will need to install the dependencies for the application. The fastest way to do this is to enter `pip install -r requirements.txt` in the command line once you've activated the virtual environment.
+Once the zip has been downloaded and expanded, copy the files to the directory location where you want to keep the source code. Create and activate a virtual environment and then install the dependencies for the application. The fastest way to do this is to enter `pip install -r requirements.txt` in the command line once you've activated the virtual environment. 
 
 Once you've installed dependencies for the project, you will need to open the **main.py** file in the root directory of the project, and **run the main method** _(this is the only method in the file)_. 
 
