@@ -115,9 +115,3 @@ class MainWindow(QtBaseWindow, Ui_MainWindow):
             self.main_league_list.addItem(league.name)
 
 
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
-
